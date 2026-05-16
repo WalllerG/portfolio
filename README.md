@@ -1,6 +1,6 @@
 # portfolio
 
-my personal site. built with next.js + tailwind. dark theme, orange accents.
+my personal site. built with next.js + tailwind. dark theme, yellow accents.
 
 ## run it
 

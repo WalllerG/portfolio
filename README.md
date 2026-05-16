@@ -17,3 +17,5 @@ then open http://localhost:3000.
 - tailwind
 - framer motion
 - spline (for the 3d stuff)
+
+UI design resources and inspiration from [21st.dev](https://21st.dev).

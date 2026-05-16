@@ -84,7 +84,7 @@ const CYCLE_TEXTS = [
   '  AOC ',  // 6
   ' HACK ',  // 6
   '  CS  ',  // 6
-  ' 2025 ',  // 6
+  ' 2026 ',  // 6
 ]
 
 function CyclingCommitsGrid() {
@@ -123,7 +123,7 @@ const ACHIEVEMENTS = [
   {
     name:  'Codeforces',
     image: '/images/codeforces.png',
-    href:  '#',
+    href:  'https://codeforces.com/profile/WaterG',
   },
   {
     name:  'Codyssi',

@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation"
 import { ShaderAnimation } from "@/components/ui/shader-animation"
 
 // ─── text constants ───────────────────────────────────────────────────────────
-const WELCOME_WHITE  = "Hey, Welcome to my "   // 19 chars
-const WELCOME_ORANGE = "page"                   // last word — typed in orange
+const WELCOME_WHITE  = "Hey, Welcome to my "        // 19 chars
+const WELCOME_ORANGE = "Website"                   // last word — typed in orange
 const WELCOME        = WELCOME_WHITE + WELCOME_ORANGE
 
 const CTA_WHITE      = "GET "                   // 4 chars

@@ -6,7 +6,9 @@ import { ChevronDown, GitBranch, Link2, ExternalLink } from 'lucide-react'
 import { SplineScene } from '@/components/ui/splite'
 import { Spotlight } from '@/components/ui/spotlight'
 import { CommitsGrid } from '@/components/ui/commits-grid'
-import { TechStackOrbit } from '@/components/ui/tech-stack-orbit'
+import { TechMarquee } from '@/components/ui/tech-marquee'
+import { ProjectsSection } from '@/components/ui/tech-stack-orbit'
+import { Footer } from '@/components/ui/footer'
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
@@ -138,9 +140,20 @@ function AchievementsSection({ sectionRef, onScrollDown }: { sectionRef: React.R
     >
       <div className="w-full flex flex-col lg:flex-row items-stretch gap-16 px-8 lg:px-20">
 
-        {/* Left: only the animation block, stretched to match right side */}
-        <div className="flex-1 flex items-center justify-center bg-zinc-950 border border-zinc-800 rounded-xl p-6">
-          <CyclingCommitsGrid />
+        {/* Left: one big container with two sub-blocks (github animation + tech marquee) */}
+        <div className="flex-1 flex flex-col bg-zinc-950 border border-zinc-800 rounded-xl overflow-hidden">
+          {/* Sub-block 1: GitHub commits animation */}
+          <div className="p-6 flex items-center justify-center">
+            <CyclingCommitsGrid />
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-zinc-800 mx-6" />
+
+          {/* Sub-block 2: Tech stack cycle */}
+          <div className="flex-1 flex items-center py-4">
+            <TechMarquee />
+          </div>
         </div>
 
         {/* Right: achievement cards */}
@@ -197,7 +210,7 @@ function AchievementsSection({ sectionRef, onScrollDown }: { sectionRef: React.R
 
       <button
         onClick={onScrollDown}
-        aria-label="Scroll to tech stack"
+        aria-label="Scroll to projects"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-yellow-400 hover:text-yellow-300 transition-colors duration-200 animate-bounce"
       >
         <ChevronDown size={32} />
@@ -210,20 +223,21 @@ function AchievementsSection({ sectionRef, onScrollDown }: { sectionRef: React.R
 
 export default function MainPage() {
   const achievementsRef = useRef<HTMLElement>(null)
-  const techStackRef    = useRef<HTMLDivElement>(null)
+  const projectsRef     = useRef<HTMLDivElement>(null)
 
   const scrollToAchievements = () =>
     achievementsRef.current?.scrollIntoView({ behavior: 'smooth' })
-  const scrollToStack = () =>
-    techStackRef.current?.scrollIntoView({ behavior: 'smooth' })
+  const scrollToProjects = () =>
+    projectsRef.current?.scrollIntoView({ behavior: 'smooth' })
 
   return (
     <main className="bg-black">
       <HeroSection onScrollDown={scrollToAchievements} />
-      <AchievementsSection sectionRef={achievementsRef} onScrollDown={scrollToStack} />
-      <div ref={techStackRef}>
-        <TechStackOrbit />
+      <AchievementsSection sectionRef={achievementsRef} onScrollDown={scrollToProjects} />
+      <div ref={projectsRef}>
+        <ProjectsSection />
       </div>
+      <Footer />
     </main>
   )
 }

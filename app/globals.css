@@ -167,3 +167,65 @@
     @apply font-sans;
   }
 }
+
+/* ─── Light theme overrides ─────────────────────────────────────────────────
+   Only three swaps:
+     bg-black       → white
+     text-white     → black
+     text-yellow-*  → #bc6c25
+*/
+html.light .bg-black {
+  background-color: #ffffff !important;
+}
+html.light .text-white {
+  color: #000000 !important;
+}
+html.light .text-yellow-400,
+html.light .text-yellow-300,
+html.light .hover\:text-yellow-400:hover,
+html.light .hover\:text-yellow-300:hover,
+html.light .group:hover .group-hover\:text-yellow-400,
+html.light .group:hover .group-hover\:text-yellow-300 {
+  color: #bc6c25 !important;
+}
+
+/* Bio paragraph (zinc-200) reads too light on white — make it black */
+html.light .text-zinc-200 {
+  color: #000000 !important;
+}
+
+/* Section 2 blocks + section 3 terminal: zinc containers go white */
+html.light .bg-zinc-950,
+html.light .bg-zinc-900,
+html.light .bg-zinc-800 {
+  background-color: #ffffff !important;
+}
+
+/* Tech-marquee fade edges fade from the container — match white */
+html.light .from-zinc-950 {
+  --tw-gradient-from: #ffffff !important;
+}
+
+/* Tech-marquee skill cards: gradients use transparency, so they need a dark
+   underlay to keep their original look once the container goes white. */
+html.light .tech-skill-card {
+  background-color: #3f3f46 !important;
+}
+
+/* Project card body text (zinc-400 / zinc-300) is unreadable on white cards */
+html.light .text-zinc-400,
+html.light .text-zinc-300 {
+  color: #000000 !important;
+}
+
+/* ─── Loading page isolation ─────────────────────────────────────────────────
+   The loading page sits over a dark shader background, so its text should
+   always stay white/yellow regardless of theme. */
+html.light .loading-page .text-white,
+html.light .loading-page .hover\:text-white:hover {
+  color: #ffffff !important;
+}
+html.light .loading-page .text-yellow-400,
+html.light .loading-page .hover\:text-yellow-400:hover {
+  color: #facc15 !important;
+}

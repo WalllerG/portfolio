@@ -2,13 +2,14 @@
 
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import { ChevronDown, GitBranch, Link2, ExternalLink } from 'lucide-react'
+import { ChevronDown, ExternalLink } from 'lucide-react'
 import { SplineScene } from '@/components/ui/splite'
 import { Spotlight } from '@/components/ui/spotlight'
 import { CommitsGrid } from '@/components/ui/commits-grid'
 import { TechMarquee } from '@/components/ui/tech-marquee'
 import { ProjectsSection } from '@/components/ui/tech-stack-orbit'
 import { Footer } from '@/components/ui/footer'
+import CinematicSwitch from '@/components/ui/cinematic-glow-toggle'
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
@@ -36,22 +37,7 @@ function HeroSection({ onScrollDown }: { onScrollDown: () => void }) {
             looking for a Summer 2026 software engineering internship.
           </p>
           <div className="flex items-center gap-6 pt-2">
-            <a
-              href="https://github.com/WalllerG"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-zinc-300 hover:text-yellow-400 transition-colors duration-200"
-            >
-              <GitBranch size={18} /> GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/walter-guo-4a7779387/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-zinc-300 hover:text-yellow-400 transition-colors duration-200"
-            >
-              <Link2 size={18} /> LinkedIn
-            </a>
+            <CinematicSwitch />
           </div>
         </div>
 

@@ -101,7 +101,7 @@ export function LoadingPage() {
   )
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="loading-page relative w-full h-screen overflow-hidden">
       <ShaderAnimation />
 
       <div className="absolute inset-0 flex items-center justify-center">

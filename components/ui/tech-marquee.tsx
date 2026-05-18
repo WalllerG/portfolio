@@ -192,7 +192,7 @@ function SkillCard({ skill }: { skill: Skill }) {
   return (
     <div
       className={cn(
-        'group relative w-32 h-32 rounded-2xl shrink-0',
+        'tech-skill-card group relative w-32 h-32 rounded-2xl shrink-0',
         'backdrop-blur-xl border-2 bg-gradient-to-br shadow-xl',
         'hover:scale-105 hover:-translate-y-2 hover:shadow-2xl',
         'transition-all duration-500 ease-out overflow-hidden cursor-default',

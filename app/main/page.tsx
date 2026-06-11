@@ -67,7 +67,7 @@ function HeroSection({ onScrollDown }: { onScrollDown: () => void }) {
 const CYCLE_TEXTS = [
   'WALTER',  // 6
   ' CODE ',  // 6
-  '  AOC ',  // 6
+  ' AOC ',  // 6
   ' HACK ',  // 6
   '  CS  ',  // 6
   ' 2026 ',  // 6

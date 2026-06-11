@@ -77,7 +77,7 @@ const PROJECTS: Project[] = [
     fullDescription:
       'Built during the CodeJam hackathon, this tool uses speech recognition to parse natural-language event descriptions and automatically generates structured calendar entries — say it, schedule it.',
     tags: ['Hackathon', 'Speech-to-Text', 'Python'],
-    href: 'https://github.com/WalllerG/CodeJam-VC',
+    href: 'https://github.com/WalllerG/VC-2.0',
   },
 ]
 

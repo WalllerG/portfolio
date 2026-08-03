@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Bird, Blocks, CalendarClock, ExternalLink } from 'lucide-react'
+import { Bird, Blocks, CalendarClock, CandlestickChart, ExternalLink } from 'lucide-react'
 import { FlippingCard } from '@/components/ui/flipping-card'
 
 // ─── ASCII art terminal heading ───────────────────────────────────────────────
@@ -78,6 +78,17 @@ const PROJECTS: Project[] = [
       'Built during the CodeJam hackathon, this tool uses speech recognition to parse natural-language event descriptions and automatically generates structured calendar entries — say it, schedule it.',
     tags: ['Hackathon', 'Speech-to-Text', 'Python'],
     href: 'https://github.com/WalllerG/VC-2.0',
+  },
+  {
+    id: 'trading-bot',
+    title: 'Trading Bot',
+    icon: <CandlestickChart size={72} strokeWidth={1.5} />,
+    gradient: 'from-emerald-500/30 via-teal-700/20 to-zinc-900',
+    shortDescription: 'A hands-free trading bot that backtests strategies, then trades them live.',
+    fullDescription:
+      'An event-driven algorithmic trading system for US equities. Strategies are backtested against historical data with no lookahead bias and honest transaction costs, then the exact same code runs hands-free on Alpaca paper trading — with an independent risk layer handling position sizing, ATR stops, and drawdown limits.',
+    tags: ['Python', 'Alpaca API', 'pandas'],
+    href: 'https://github.com/WalllerG/Automated-paper-trading-bot',
   },
 ]
 
